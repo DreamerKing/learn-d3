@@ -1,0 +1,29 @@
+{
+  "name": "learn-d3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-dev --no-notify index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DreamerKing/learn-d3.git"
+  },
+  "keywords": [],
+  "author": "DreamerKing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DreamerKing/learn-d3/issues"
+  },
+  "homepage": "https://github.com/DreamerKing/learn-d3#readme",
+  "dependencies": {
+    "koa": "^2.3.0",
+    "koa-router": "^7.2.1",
+    "koa-static": "^4.0.1",
+    "koa-views": "^6.1.1",
+    "mustache": "^2.3.0",
+    "requirejs": "^2.3.5"
+  }
+}
