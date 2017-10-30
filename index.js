@@ -16,6 +16,7 @@ router.get('/', d3)
 	.get('/mustache', learnMustache)
 	.get('/hello', hello)
 	.get('/select', selectSet)
+	.get('/bar', showBar)
 	.get('/start', start);
 
 app.use(router.routes());
@@ -33,6 +34,12 @@ async function hello(ctx) {
 async function selectSet(ctx) {
 	await ctx.render("select",{
 		text: "Select Set"
+	});
+};
+
+async function showBar(ctx) {
+	await ctx.render("bar", {
+		title: "draw bar chart"
 	});
 };
 
