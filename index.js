@@ -17,7 +17,10 @@ router.get('/', d3)
 	.get('/hello', hello)
 	.get('/select', selectSet)
 	.get('/bar', showBar)
-	.get('/start', start);
+	.get('/map', drawMap)
+	.get('/linear-scale', linearScale)
+	.get('/start', start)
+	.get('/interaction', interaction);
 
 app.use(router.routes());
 
@@ -31,6 +34,12 @@ async function hello(ctx) {
 	})
 };
 
+async function drawMap(ctx) {
+	await ctx.render("map", {
+		title: "Map"
+	})
+};
+
 async function selectSet(ctx) {
 	await ctx.render("select",{
 		text: "Select Set"
@@ -40,6 +49,18 @@ async function selectSet(ctx) {
 async function showBar(ctx) {
 	await ctx.render("bar", {
 		title: "draw bar chart"
+	});
+};
+
+async function interaction(ctx) {
+	await ctx.render("interaction", {
+		title: "interaction"
+	});
+}
+
+async function linearScale(ctx) {
+	await ctx.render("linearScale", {
+		title: "linearScale"
 	});
 };
 
