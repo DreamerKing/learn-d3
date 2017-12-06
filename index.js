@@ -20,6 +20,7 @@ router.get('/', d3)
 	.get('/map', drawMap)
 	.get('/linear-scale', linearScale)
 	.get('/start', start)
+	.get('/scale', scale)
 	.get('/interaction', interaction);
 
 app.use(router.routes());
@@ -45,6 +46,13 @@ async function selectSet(ctx) {
 		text: "Select Set"
 	});
 };
+
+async function scale(ctx) {
+	await ctx.render("scale", {
+		main: "scale"
+	})
+};
+ 
 
 async function showBar(ctx) {
 	await ctx.render("bar", {
