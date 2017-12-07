@@ -21,6 +21,7 @@ router.get('/', d3)
 	.get('/linear-scale', linearScale)
 	.get('/start', start)
 	.get('/scale', scale)
+	.get('/axis', axis)
 	.get('/interaction', interaction);
 
 app.use(router.routes());
@@ -41,6 +42,11 @@ async function drawMap(ctx) {
 	})
 };
 
+async function axis(ctx) {
+	await ctx.render("axis", {
+		main: "axis"
+	})
+};
 async function selectSet(ctx) {
 	await ctx.render("select",{
 		text: "Select Set"

@@ -59,11 +59,10 @@ define(["d3"], function(d3) {
 		.attr("cx", function(d, i) {
 			return 30 + i * 80;
 		})
-		.attr({
-			"cy": 100,
-			"r": 30
-		})
-		.fill("fill", function(d,i) {
+		.attr("cy",100)
+		.attr("r", 30)
+		.attr("fill", function(d,i) {
+			console.log(c10(i),"C10");
 			return c10(i);
 		});
 
