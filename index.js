@@ -21,6 +21,7 @@ router.get('/', d3)
 	.get('/linear-scale', linearScale)
 	.get('/start', start)
 	.get('/scale', scale)
+	.get("/scatter", scatterChart)
 	.get('/axis', axis)
 	.get('/interaction', interaction);
 
@@ -33,6 +34,12 @@ function d3(ctx) {
 async function hello(ctx) {
 	await ctx.render("hello",{
 		text: "Hello D3!"
+	})
+};
+
+async function scatterChart(ctx) {
+	await ctx.render("scatter", {
+		main: "scatter-chart"
 	})
 };
 
